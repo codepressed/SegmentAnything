@@ -82,7 +82,7 @@ jobs:
           
       - name: Access Repository Secret
         run: |
-          echo ${{ secrets.CLOUD_API_KEY }} > api_key.json
+          echo '${{ secrets.CLOUD_API_KEY }}' > api_key.json
         
       - name: Install Dependencies
         run: |
