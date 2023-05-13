@@ -51,15 +51,14 @@ on:
     branches: [ "main" ]
 
 env:
-  PROJECT_ID: bold-guide-366619 # TODO: update Google Cloud project id
-  SERVICE: segmentanything-00001-cw2 # TODO: update Cloud Run service name
-  REGION: europe-west9 # TODO: update Cloud Run service region
-  RESTBAI_API_KEY: e311a67a878470f221c88835a02a58702f80773dd4d523e308822e94d01a39a0 # TODO: update api key # TODO: update register key 
+  PROJECT_ID: bold-guide-366619
+  SERVICE: segmentanything-00001-cw2
+  REGION: europe-west9
+  RESTBAI_API_KEY: '${{secrets.RESTBAI_API_KEY}}'
   ENVIRONMENT: RESTBAI
 
 jobs:
   deploy:
-    # Add 'id-token' with the intended permissions for workload identity federation
     permissions:
       contents: 'read'
       id-token: 'write'
