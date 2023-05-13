@@ -89,7 +89,7 @@ jobs:
           pip install segment-anything
           pip install datetime
           pip install shapely
-          pip install pytorch
+          pip install pyTorch
 
       - name: Deploy to Cloud Run
         id: deploy
