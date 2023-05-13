@@ -72,8 +72,9 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v0'
         with:
-          service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}' # e.g. - my-service-account@my-project.iam.gserviceaccount.com
-     
+          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}' 
+          service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
+          
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
