@@ -55,7 +55,7 @@ env:
   SERVICE: segmentanything-00001-cw2 # TODO: update Cloud Run service name
   REGION: europe-west9 # TODO: update Cloud Run service region
   RESTBAI_API_KEY: e311a67a878470f221c88835a02a58702f80773dd4d523e308822e94d01a39a0 # TODO: update api key # TODO: update register key 
-
+  ENVIRONMENT: RESTBAI
 
 jobs:
   deploy:
@@ -90,6 +90,7 @@ jobs:
           pip install segment-anything
           pip install datetime
           pip install shapely
+          pip install pytorch
       # NOTE: Alternative option - authentication via credentials json
       # - name: Google Auth
       #   id: auth
